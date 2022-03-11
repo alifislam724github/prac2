@@ -218,25 +218,24 @@ public function AdminUpdate(){
    }
    public function AdminUpdateSubmit(Request $request){
 
-    $service =Admin ::where('id', $request->id)->first();
+    $Admin =Admin ::where('id', $request->id)->first();
 
-    return "hi";
-    echo $request->name;
-    // $service->name =$request->name;
-    // $service->email=$request->email;
-    // $service->password=$request->password;
-    // $service->address=$request->address;
-    // $service->phoneno =$request->phoneno;
+    
+    $Admin->name =$request->name;
+    $Admin->email=$request->email;
+    $Admin->password=$request->password;
+    $Admin->address=$request->address;
+    $Admin->phoneno =$request->phoneno;
 
-  $service->save();
+  $Admin->save();
   return view ("pages.AdminDash");
 }
 
-public function customerLogout(){
+public function AdminLogout(){
 
-  session()->forget('customerId');
+  session()->forget('userId');
 
-  return redirect()->route('signin');
+  return redirect()->route('AdminLogin');
 
 }
 

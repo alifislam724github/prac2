@@ -30,3 +30,5 @@ Route::get('/AdminInfo',[AdminController::class, 'AdminInfo'])->name('AdminInfo'
 
 Route::get('/AdminUpdate',[AdminController::class, 'AdminUpdate'])->name('AdminUpdate');
 Route::post('/AdminUpdate',[AdminController::class, 'AdminUpdateSubmit'])->name('AdminUpdateSubmit');
+
+Route::get('/AdminLogout', [AdminController::class, 'AdminLogout'])->name('AdminLogout');

@@ -20,7 +20,7 @@
     <span class="text-danger">{{$message}}</span>
 @enderror
 <label for="">Name</label>
-        <input type="text" name="id" id="" value="{{$user->name}}" class="form-control" >
+        <input type="text" name="name" id="" value="{{$user->name}}" class="form-control" >
         @error('name')
             <span class="text-danger">{{$message}}</span>
         @enderror

@@ -4,3 +4,4 @@
 
 <a class="btn btn-warning" href="{{route('AdminInfo')}}">Information</a> 
  <a class="btn btn-warning" href="{{route('AdminUpdateSubmit')}}">Update Details</a> 
+ <a class="btn btn-danger" href="{{route('AdminLogout')}}">Logout</a> 
