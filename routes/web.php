@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\http\controllers\AdminController;
+use App\http\controllers\ServiceProviderController;
+use App\http\controllers\CustomerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,3 +34,7 @@ Route::get('/AdminUpdate',[AdminController::class, 'AdminUpdate'])->name('AdminU
 Route::post('/AdminUpdate',[AdminController::class, 'AdminUpdateSubmit'])->name('AdminUpdateSubmit');
 
 Route::get('/AdminLogout', [AdminController::class, 'AdminLogout'])->name('AdminLogout');
+
+Route::get('/ServiceProviderDetails', [ServiceProviderController::class, 'ServiceProviderDetails'])->name('ServiceProviderDetails');
+
+Route::get('/CustomerDetails', [CustomerController::class, 'CustomerDetails'])->name('CustomerDetails');
