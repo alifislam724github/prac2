@@ -231,6 +231,34 @@ public function AdminUpdate(){
   return view ("pages.AdminDash");
 }
 
+public function AdminDelete(Request $request){
+    $Admin=Session::get("userId");
+    $Admin =Admin ::where('id', $Admin)->delete();
+
+//     $Admin->name =$request->name;
+
+//     $Admin->email=$request->email;
+
+//     $Admin->password=$request->password;
+
+//     $Admin->phoneno =$request->phoneno;
+
+//     $Admin->servicetype =$request->servicetype;
+
+//     $Admin->address=$request->address;
+
+
+
+//   $Admin->delete();
+
+     session()->forget('userId');
+
+
+
+  return view ("pages.AdminLogin");
+
+}
+
 public function AdminLogout(){
 
   session()->forget('userId');

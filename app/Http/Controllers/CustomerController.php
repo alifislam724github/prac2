@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Customer;
 use App\Http\Requests\StoreCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
+use Illuminate\Http\Request;
 use Session;
 class CustomerController extends Controller
 {
@@ -91,5 +92,14 @@ class CustomerController extends Controller
        // return $user;
 
        return view('pages.Service.CustomerDetails')->with('users', $users);
+}
+public function CustomerDetailsDelete(Request $request){
+
+    $Customer = Customer ::where('id', $request->id)->delete();
+
+ 
+
+    return view("pages.AdminDash");
+
 }
 }

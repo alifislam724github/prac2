@@ -27,7 +27,7 @@
     @enderror
     <br>
     
-    <button type="button" class= "btn btn-light">Log In</button>
+    <button class="btn btn-primary" type="submit">Submit</button>
 </form>
 
 

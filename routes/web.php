@@ -36,8 +36,14 @@ Route::post('/AdminUpdate',[AdminController::class, 'AdminUpdateSubmit'])->name(
 
 Route::get('/AdminLogout', [AdminController::class, 'AdminLogout'])->name('AdminLogout');
 
+Route::get('/AdminDelete', [AdminController::class, 'AdminDelete'])->name('AdminDelete');
+
 Route::get('/ServiceProviderDetails', [ServiceProviderController::class, 'ServiceProviderDetails'])->name('ServiceProviderDetails');
 
+Route::get('/ServiceProviderDelete/{id}',[ServiceProviderController::class,'ServiceProviderDelete'])->name('ServiceProviderDelete');
+
 Route::get('/CustomerDetails', [CustomerController::class, 'CustomerDetails'])->name('CustomerDetails');
+Route::get('/CustomerDetailsDelete/{id}',[CustomerController::class,'CustomerDetailsDelete'])->name('CustomerDetailsDelete');
 
 Route::get('/EmployeeDetails', [EmployeeController::class, 'EmployeeDetails'])->name('EmployeeDetails');
+Route::get('/EmployeeDetailsDelete/{id}', [EmployeeController::class, 'EmployeeDetailsDelete'])->name('EmployeeDetailsDelete');

@@ -36,6 +36,7 @@
             <td>{{$user->phone}}</td>             
             <td>{{$user->address}}</td>
             <td>{{$user->password}}</td>
+            <td>  <a class="btn btn-danger px-3"  href="/CustomerDetailsDelete/{{$user->id}}">Delete Information</a></td>
             </tr>
             @endforeach
        

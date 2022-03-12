@@ -38,6 +38,8 @@
             <td>{{$user->phoneno}}</td>            
             <td>{{$user->servicetype}}</td> 
             <td>{{$user->address}}</td>
+
+            <td>  <a class="btn btn-danger px-3"  href="/ServiceProviderDelete/{{$user->id}}" >Delete Information</a></td>
             </tr>
             @endforeach
        

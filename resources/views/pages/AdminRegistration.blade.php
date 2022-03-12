@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Registration</title>
 </head>
-<body style="background-image: url('images/registration1.jpg')">
+<body class="img-fluid" style="background-image: url('images/registration1.jpg')">
 <div class=" col-lg-6 ">
     
 <div style="background-image: url('images/registration.jpg')" >
@@ -49,7 +49,7 @@
     <br>
    
 
-    <button type="button" class= "btn btn-light">Submit</button>
+    <button class="btn btn-primary" type="submit">Submit</button>
 </form>
 </div>
 </div>

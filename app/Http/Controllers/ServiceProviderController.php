@@ -98,4 +98,12 @@ class ServiceProviderController extends Controller
     ;
 
     }
+    public function ServiceProviderDelete(Request $request){
+
+        $service =ServiceProvider ::where('id', $request->id)->delete();
+
+       
+        return view("pages.AdminDash");
+
+    }
 }

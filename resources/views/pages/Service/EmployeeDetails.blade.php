@@ -38,13 +38,12 @@
             <td>{{$user->username}}</td>            
             <td>{{$user->password}}</td> 
             <td>{{$user->status}}</td>
+            <td>  <a class="btn btn-danger px-3"  href="/EmployeeDetailsDelete/{{$user->id}}">Delete Information</a></td>
             </tr>
             @endforeach
        
  </table>
 
 @endsection
-</body>
-</html>
 </body>
 </html>

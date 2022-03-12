@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Employee;
 use App\Http\Requests\StoreEmployeeRequest;
 use App\Http\Requests\UpdateEmployeeRequest;
+use Illuminate\Http\Request;
 use Session;
 class EmployeeController extends Controller
 {
@@ -88,12 +89,16 @@ class EmployeeController extends Controller
 
         
         $users = Employee::all();
-       // return $user;
+    
 
        return view('pages.Service.EmployeeDetails')->with('users', $users);
 
-   ;
         
-        // return $user;
+}
+public function EmployeeDetailsDelete(Request $request){
+    $Employee =Employee ::where('id', $request->id)->delete();
+   
+    return view("pages.AdminDash");
+
 }
 }
