@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\http\controllers\AdminController;
 use App\http\controllers\ServiceProviderController;
 use App\http\controllers\CustomerController;
+use App\http\controllers\EmployeeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,3 +39,5 @@ Route::get('/AdminLogout', [AdminController::class, 'AdminLogout'])->name('Admin
 Route::get('/ServiceProviderDetails', [ServiceProviderController::class, 'ServiceProviderDetails'])->name('ServiceProviderDetails');
 
 Route::get('/CustomerDetails', [CustomerController::class, 'CustomerDetails'])->name('CustomerDetails');
+
+Route::get('/EmployeeDetails', [EmployeeController::class, 'EmployeeDetails'])->name('EmployeeDetails');

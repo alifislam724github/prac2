@@ -9,3 +9,5 @@
  <a class="btn btn-danger" href="{{route('ServiceProviderDetails')}}">Service Provier Detials </a> 
 
  <a class="btn btn-danger" href="{{route('CustomerDetails')}}">Customer Detials </a> 
+
+ <a class="btn btn-primary" href="{{route('EmployeeDetails')}}">Employee Detials </a> 

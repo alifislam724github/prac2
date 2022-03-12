@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Details</title>
+    <title>Employee Details</title>
 </head>
 <body>
 @extends('layout.app')
 
 @section('content')
 
-<h1>Customer List</h1>
+<h1>Employee List</h1>
 
 
     <table class="table table-border">
@@ -19,10 +19,11 @@
     <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Email</th>
+            <th>NID</th>
             <th>Phone</th>
-            <th>Address</th>
+            <th>User Name</th>
             <th>Password</th>
+            <th>Status</th>
             
         </tr>
 
@@ -32,15 +33,18 @@
 
             <td>{{$user->id}}</td>
             <td>{{$user->name}}</td>
-            <td>{{$user->email}}</td>             
-            <td>{{$user->phone}}</td>             
-            <td>{{$user->address}}</td>
-            <td>{{$user->password}}</td>
+            <td>{{$user->nid}}</td>            
+            <td>{{$user->phone}}</td> 
+            <td>{{$user->username}}</td>            
+            <td>{{$user->password}}</td> 
+            <td>{{$user->status}}</td>
             </tr>
             @endforeach
        
  </table>
 
 @endsection
+</body>
+</html>
 </body>
 </html>
